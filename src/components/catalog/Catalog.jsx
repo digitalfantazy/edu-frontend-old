@@ -1,14 +1,13 @@
 import React from 'react';
-import { forwardRef } from 'react';
 
 import LabList from '../labList/LabList';
 import Labs from '../labs/Labs'
 
-const Catalog = forwardRef(( props,ref ) => {
+function Catalog() {
 
 
     return (
-        <section id='catalog' className="catalog" ref={ref}>
+        <section id='catalog' className="catalog">
             <div className="main__container">
                 <h2 className="catalog-title">Работы</h2>
                 <div className="grid">
@@ -20,7 +19,7 @@ const Catalog = forwardRef(( props,ref ) => {
             </div>
         </section>
     );
-});
+};
 
 
 export default Catalog;

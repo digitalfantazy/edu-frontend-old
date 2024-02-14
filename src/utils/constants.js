@@ -1,19 +1,19 @@
 export const MENU = [
     {
         name:"Главная",
-        link: "/"
+        link: "#/"
     },
     {
         name:"Тренажеры",
-        link: "training "
+        link: "#/training "
     },
     {
         name:"Преподователям",
-        link: "proffesors"
+        link: "#/proffesors"
     },
     {
         name:"Обучающимся",
-        link: "student"
+        link: "#/student"
     },
 ];
 
@@ -21,15 +21,15 @@ export const MENU = [
 export const EXPANDLISTLABS = [
     {
         name:"Теория",
-        link:"theoty"
+        link:"#/theoty"
     },
     {
         name:"Тренажер",
-        link:"sims"
+        link:"#/sims"
     },
     {
         name:"Практика",
-        link:"practic"
+        link:"#/practic"
     }
 
 ]

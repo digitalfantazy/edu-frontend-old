@@ -4,7 +4,8 @@ import { EXPANDLISTLABS } from "../../utils/constants";
 
 import arrowImage from "../../img/arrow-down.svg";
 
-const LabListItems = ({ title }) => {
+const ListItems = ({ title }) => {
+
   const [isOpen, setOpen] = useState(true);
 
   return (
@@ -39,4 +40,4 @@ const LabListItems = ({ title }) => {
   );
 };
 
-export default LabListItems;
+export default ListItems;

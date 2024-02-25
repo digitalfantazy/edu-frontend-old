@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/diplom1/static/css/main.536de5e3.css",
+    "main.js": "/diplom1/static/js/main.c015fe16.js",
+    "static/media/kasandra.png": "/diplom1/static/media/kasandra.78a80fac3a81db03870d.png",
+    "static/media/intro-regular.eot": "/diplom1/static/media/intro-regular.342f8deccd1c5288014d.eot",
+    "static/media/intro-regular.ttf": "/diplom1/static/media/intro-regular.2657673173f1f89ae465.ttf",
+    "static/media/lab4.png": "/diplom1/static/media/lab4.aeec87b2792a2108e1be.png",
+    "static/media/lab11.png": "/diplom1/static/media/lab11.f6c5d94fde2752b8b9a7.png",
+    "static/media/lab13.png": "/diplom1/static/media/lab13.8350030a812c558ea4cf.png",
+    "static/media/lab8.png": "/diplom1/static/media/lab8.231a95a9a8a3436166bc.png",
+    "static/media/lab5.png": "/diplom1/static/media/lab5.3f9e11f64896decad92b.png",
+    "static/media/lab14.png": "/diplom1/static/media/lab14.515c67b62134232ce98c.png",
+    "static/media/lab2.png": "/diplom1/static/media/lab2.c63f2e008ac6f825f2d0.png",
+    "static/media/lab3.png": "/diplom1/static/media/lab3.17b24f31734a03be7f42.png",
+    "static/media/lab6.png": "/diplom1/static/media/lab6.31f7f1a15c22241efb65.png",
+    "static/media/intro-regular.woff": "/diplom1/static/media/intro-regular.c974876ba1d55827ca57.woff",
+    "static/media/lab10.png": "/diplom1/static/media/lab10.819fd678f31ee280e1ea.png",
+    "static/media/lab12.png": "/diplom1/static/media/lab12.6bc48dedc1aa1d4968d7.png",
+    "static/media/intro-regular.woff2": "/diplom1/static/media/intro-regular.97a9748a613afa94e08f.woff2",
+    "static/media/lab7.png": "/diplom1/static/media/lab7.646166a3f078613ce300.png",
+    "static/media/lab9.png": "/diplom1/static/media/lab9.cdc313acfe25de9eac8b.png",
+    "static/media/slick.svg": "/diplom1/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/diplom1/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/diplom1/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/diplom1/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/diplom1/index.html",
+    "static/media/arrow-down.svg": "/diplom1/static/media/arrow-down.d7c25147326015b5450018f50e276eb1.svg",
+    "main.536de5e3.css.map": "/diplom1/static/css/main.536de5e3.css.map",
+    "main.c015fe16.js.map": "/diplom1/static/js/main.c015fe16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.536de5e3.css",
+    "static/js/main.c015fe16.js"
+  ]
+}

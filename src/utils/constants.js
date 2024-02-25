@@ -23,15 +23,15 @@ export const MENU = [
     },
     {
         name:"Автоматизированные обучающие системы",
-        link: "/sims-page"
+        link: "sims-page"
     },
     {
         name:"Преподователям",
-        link: "/proffesors"
+        link: "proffesors"
     },
     {
         name:"Обучающимся",
-        link: "/student"
+        link: "student"
     },
 ];
 

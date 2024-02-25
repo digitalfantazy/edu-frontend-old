@@ -1,8 +1,4 @@
-.slider {
-    margin: auto;
-    margin-top: 130px;
-    margin-bottom: 35px;;
-}
+
 
 .title {
     text-align: center;
@@ -10,21 +6,17 @@
 	font: 500 22px/ 140% var(--font-family);
 }
 
-
-.slider-container {
-    margin-bottom: 100px;
-}
-
 .slider-item {
     width: 100%;
+    margin-bottom: 100px;
 }
   
 .slick-slide {
-    padding: 0 10px; /* Установите здесь нужные вам внешние отступы */
+    padding: 0 10px; 
 }
 
 .slick-track {
-    max-height: 200px; /* Установите нужную высоту */
+    max-height: 200px; 
 }
   
 .card {
@@ -37,6 +29,8 @@
 }
 
 .slider-title {
+	border-top: 1px solid #d2d2d2;
+	height: 85px;
     font: 500 20px/ 140% var(--font-family);
 }
 

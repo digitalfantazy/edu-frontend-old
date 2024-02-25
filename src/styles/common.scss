@@ -5,6 +5,7 @@
 @import "./labs.scss";
 @import "./auth.scss";
 @import "./sims-overview.scss";
+@import "./labnav.scss";
 
 
 @font-face {
@@ -58,6 +59,12 @@ h2 {
 	margin-inline-end: 0px;
 }
 
+.main {
+	margin: auto;
+    margin-top: 130px;
+    margin-bottom: 35px;;
+}
+
 .container {
 	border: 0px solid;
 	margin: 0 auto;
@@ -68,7 +75,7 @@ h2 {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	gap: 20px;
+
 }
 
 

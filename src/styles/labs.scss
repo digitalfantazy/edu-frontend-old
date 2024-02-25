@@ -5,6 +5,8 @@
 	grid-column: 9 span;
 }
 
+
+
 .catalog-list {
 	grid-template-columns: repeat(9, 1fr);
 }
@@ -32,6 +34,7 @@
 }
 
 .information {
+	text-align: center;
 	border-top: 1px solid #d2d2d2;
 	height: 85px;
 }
@@ -39,8 +42,7 @@
 .sims-title {
 	padding-top: 5px;
     padding-bottom: 5px;
-	padding-left: 7px;
-    display: flex;
+	padding-left: 7px;;
     flex-grow: 1;
     align-items: center;
 	font:  500 18px/ 140% var(--font-family);

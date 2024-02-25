@@ -1,80 +1,191 @@
+
+import kasandraIMG from '../img/kasandra.png';
+import lab2 from '../img/lab2.png';
+import lab3 from '../img/lab3.png';
+import lab4 from '../img/lab4.png';
+import lab5 from '../img/lab5.png';
+import lab6 from '../img/lab6.png';
+import lab7 from '../img/lab7.png';
+import lab8 from '../img/lab8.png';
+import lab9 from '../img/lab9.png';
+import lab10 from '../img/lab10.png';
+import lab11 from '../img/lab11.png';
+import lab12 from '../img/lab12.png';
+import lab13 from '../img/lab13.png';
+import lab14 from '../img/lab14.png';
+
+
+
 export const MENU = [
     {
         name:"Главная",
-        link: "#/"
+        link: "/"
     },
     {
         name:"Автоматизированные обучающие системы",
-        link: "#/sims-page"
+        link: "sims-page"
     },
     {
         name:"Преподователям",
-        link: "#/proffesors"
+        link: "proffesors"
     },
     {
         name:"Обучающимся",
-        link: "#/student"
+        link: "student"
     },
 ];
 
 
-export const EXPANDLISTLABS = [
-    {
-        name:"Теория",
-        link:"#/theoty"
-    },
-    {
-        name:"Тренажер",
-        link:"#/sims"
-    },
-    {
-        name:"Практика",
-        link:"#/practic"
-    }
+export const EXPANDLISTLABS = {
+    "Электронные учебные пособия": [
+        {
+            name:"Локатор нелинейных переходов NR2000",
+            link:"NR2000"
+        },
+        {
+            name:"Анализаторы проводных линий",
+            link:"linanalyz"
+        }
+    ],
 
-]
+    "Обучающие программы": [
+        {
+            name:"Обнаружители видеокамер",
+            link:"videtect"
+        }
+    ],
+
+    "Программные тренажеры": [
+        {
+            name:"КАССАНДРА - комплекс радиомониторинга и анализа сигналов серии",
+            link:"kasandra"
+        }
+    ],
+
+    "Тренажеры": [
+        {
+            name:"Устройство поиска жучков",
+            link:"bugsearch"
+        }
+    ],
+
+}
+
 
 export const IMAGES = [
     {
-        imgURL: "/images/kasandra.png",
+        id: 1,
+        imgURL: kasandraIMG,
         imgAlt: "kasandra",
-        name: "Касандра",
+        name: "КАССАНДРА - комплекс радиомониторинга и анализа сигналов серии",
+        descption: "Касандра",
     },
     {
-        imgURL: "/images/lab2.png",
+        id: 2,
+        imgURL: lab2,
         imgAlt: "lab2",
-        name: "Name 1"
+        name: "Название 2",
+        descption: "Описание 2",
     },
     {
-        imgURL: "/images/lab3.png",
+        id: 3,
+        imgURL: lab3,
         imgAlt: "lab3",
-        name: "Name 2"
+        name: "Название 3",
+        descption: "Описание 3",
     },
     {
-        imgURL: "/images/lab4.png",
+        id: 4,
+        imgURL: lab4,
         imgAlt: "lab4",
-        name: "Name 3"
+        name: "Название 4",
+        descption: "Описание 4",
     },
     {
-        imgURL: "/images/lab5.png",
+        id: 5,
+        imgURL: lab5,
         imgAlt: "lab5",
-        name: "Name 4"
+        name: "Название 5",
+        descption: "Описание 5",
     },
     {
-        imgURL: "/images/lab6.png",
+        id: 6,
+        imgURL: lab6,
         imgAlt: "lab6",
-        name: "Name 5"
-    },    
+        name: "Название 6",
+        descption: "Описание 6",
+    },
     {
-        imgURL: "/images/lab7.png",
+        id: 7,
+        imgURL: lab7,
         imgAlt: "lab7",
-        name: "Name 6"
+        name: "Название 7",
+        descption: "Описание 7",
     },
     {
-        imgURL: "/images/lab8.png",
+        id: 8,
+        imgURL: lab8,
         imgAlt: "lab8",
-        name: "Name 7"
+        name: "Название 8",
+        descption: "Описание 8",
+    },
+    {
+        id: 9,
+        imgURL: lab9,
+        imgAlt: "lab9",
+        name: "Название 9",
+        descption: "Описание 9",
+    },
+    {
+        id: 10,
+        imgURL: lab10,
+        imgAlt: "lab10",
+        name: "Название 10",
+        descption: "Описание 10",
+    },
+    {
+        id: 11,
+        imgURL: lab11,
+        imgAlt: "lab11",
+        name: "Название 11",
+        descption: "Описание 11",
+    },
+    {
+        id: 12,
+        imgURL: lab12,
+        imgAlt: "lab12",
+        name: "Название 12",
+        descption: "Описание 12",
+    },
+    {
+        id: 13,
+        imgURL: lab13,
+        imgAlt: "lab13",
+        name: "Название 13",
+        descption: "Описание 13",
+    },
+    {
+        id: 14,
+        imgURL: lab14,
+        imgAlt: "lab14",
+        name: "Название 14",
+        descption: "Описание 14",
     },
 
-]
+];
 
+
+export const TABLINKS = [
+    {
+        name:"Программное обеспечение",
+        link:"programa"
+    },
+    {
+        name:"Методическое обеспечение",
+        link:"about"
+    },
+    {
+        name:"Справка",
+        link:"info"
+    },
+]

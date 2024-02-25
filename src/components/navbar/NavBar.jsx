@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
 import { MENU } from "../../utils/constants";
 
@@ -7,9 +9,9 @@ const NavBar = () => {
       <ul className="nav__list">
         {MENU.map(({ name, link }) => (
           <li className="nav__item" key={name} >
-            <a href={link} className="nav__link">
+            <Link to={`#/${link}`} className="nav__link">
               {name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

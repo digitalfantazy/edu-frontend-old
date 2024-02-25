@@ -38,7 +38,7 @@ const ListItems = ({ title }) => {
           {list.map(({ name, link }) => (
             <li key={name}>
               <NavLink
-                to={`#/${link}`}
+                to={`/${link}`}
                 className="group__items"
               >
                 {name}

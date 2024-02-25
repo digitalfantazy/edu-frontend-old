@@ -9,7 +9,7 @@ const NavBar = () => {
       <ul className="nav__list">
         {MENU.map(({ name, link }) => (
           <li className="nav__item" key={name} >
-            <Link to={`#/${link}`} className="nav__link">
+            <Link to={link} className="nav__link">
               {name}
             </Link>
           </li>

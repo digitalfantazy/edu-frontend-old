@@ -7,10 +7,10 @@ import SimsPage from "./pages/SimsPage";
 import ProffesorPage from "./pages/ProffesorPage";
 import StudentPage from "./pages/StudentPage";
 
-
 import Header from "./components/header/Header";
 import Catalog from "./components/catalog/Catalog";
 import Intro from "./components/introBlock/Intro";
+import Labs from "./components/labs/Labs";
 
 function App() {
   return (
@@ -28,6 +28,17 @@ function App() {
               </>
             }
           />
+          <Route>
+            <Route path="/:labId/:param/*" 
+              element={
+                <>
+                <Intro />
+                <Catalog />
+                <Labs />
+                </>
+              } 
+            />
+          </Route>
 
           <Route path="/login" element={<LoginPage />} />
           <Route path="/reg" element={<SingUpPage />} />

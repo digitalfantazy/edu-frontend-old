@@ -1,4 +1,4 @@
-import SliderComponent from "../components/slider/SliderComponent";
+import Slider from "../components/slider/Slider";
 import { IMAGES } from "../utils/constants";
 
 const SimsPage = () => {
@@ -16,12 +16,12 @@ const SimsPage = () => {
             <div className="container">
                 <div className="slider-item">       
                     <h1 className="title">Электоронные учебные пособия</h1>
-                    <SliderComponent images={firstSlider} />              
+                    <Slider images={firstSlider} />              
                 </div>
 
                 <div className="slider-item">
                     <h1 className="title">Программные тренажеры</h1>
-                    <SliderComponent  images={secondSlider} />  
+                    <Slider  images={secondSlider} />  
                 </div>
             </div>
         </div>

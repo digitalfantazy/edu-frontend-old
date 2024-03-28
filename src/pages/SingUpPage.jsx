@@ -1,58 +1,126 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
+import { register, clearError } from "../store/reducers/authSlice";
+import { formatErrorMessage } from "../utils/formatErrorMessage";
+
 const SingUpPage = () => {
+  const dispatch = useDispatch();
 
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [redirect, setRedirect] = useState(false);
+  const { registered, loading, error } = useSelector((state) => state.auth);
 
-    const submit = async (event) => {
-        event.preventDefault();
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
-        await fetch('http://localhost:8000/api/register', {
-            method: 'POST',
-            headers: {'Content-Type': 'aplication/json'},
-            body: JSON.stringify({
-                name,
-                email,
-                password
-            })
-        });
+  const { username, email, password } = formData;
 
-        setRedirect(true)
-    }
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
-    if (redirect) {
-        return <Navigate to="/login"/>;
-        }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(error);
 
-    return (
-        <div className="login-form">
-            <form className="form-signin" onSubmit={submit}>
+    dispatch(clearError());
 
-                <h1 className="login-title">Регистрация</h1>
+    dispatch(register({ username, email, password }));
+  };
 
-                <div className="form-floating">
-                    <input type="name" className="form-control" id="floatingInputName" placeholder="Name" onChange={(e) => setName(e.target.value)} required />
-                    <label htmlFor="floatingInput">Имя</label>
-                </div>
+  if (registered) {
+    return <Navigate to="/login" />;
+  }
 
-                <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"onChange={(e) => setEmail(e.target.value)} required />
-                    <label htmlFor="floatingInput">Адрес электроной почты</label>
-                </div>
-                <div className="form-floating">
-                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password"onChange={(e) => setPassword(e.target.value)} required />
-                    <label htmlFor="floatingPassword">Пароль</label>
-                </div>
-            
-                <button className="btn btn-login registration" type="submit">Зарегистрироваться</button>
+  return (
+    <div className="login-form">
+      <form className="form-signin" onSubmit={handleSubmit}>
+        <h1 className="login-title">Регистрация</h1>
 
-            </form>
+        <div className="form-floating">
+          <input
+            name="username"
+            type="text"
+            className="form-control"
+            id="floatingInputName"
+            placeholder="username"
+            value={username}
+            onChange={handleChange}
+            required
+            style={
+              error && error.username
+                ? { backgroundColor: "rgba(244, 68, 68, 0.203)" }
+                : {}
+            }
+          />
+          <label htmlFor="floatingInput">Имя пользователя</label>
         </div>
-    );
-}
- 
+
+        <div className="form-floating">
+          <input
+            name="email"
+            type="email"
+            className="form-control"
+            id="floatingInput"
+            placeholder="email"
+            value={email}
+            onChange={handleChange}
+            required
+            style={
+              error && error.email
+                ? { backgroundColor: "rgba(244, 68, 68, 0.203)" }
+                : {}
+            }
+          />
+          <label htmlFor="floatingInput">Адрес электроной почты</label>
+        </div>
+        <div className="form-floating">
+          <input
+            name="password"
+            type="password"
+            className="form-control"
+            id="floatingPassword"
+            placeholder="password"
+            value={password}
+            onChange={handleChange}
+            required
+            style={
+              error && error.password
+                ? { backgroundColor: "rgba(244, 68, 68, 0.203)" }
+                : {}
+            }
+          />
+          <label htmlFor="floatingPassword">Придумайте пароль</label>
+        </div>
+        {error && (
+          <>
+            {Object.entries(error).map(([field, errorMessages], index) => (
+              <div key={index}>
+                {errorMessages.map((errorMessage, idx) => (
+                  <p key={idx} className="error-message">
+                    {formatErrorMessage(field, errorMessage)}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </>
+        )}
+        {loading ? (
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        ) : (
+          <button className="btn btn-login registration" type="submit">
+            {" "}
+            Зарегистрироваться{" "}
+          </button>
+        )}
+      </form>
+    </div>
+  );
+};
+
 export default SingUpPage;

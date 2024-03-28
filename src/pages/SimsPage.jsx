@@ -23,6 +23,11 @@ const SimsPage = () => {
                     <h1 className="title">Программные тренажеры</h1>
                     <Slider  images={secondSlider} />  
                 </div>
+
+                <div className="slider-item">
+                    <h1 className="title">Обучающие программы</h1>
+                    <Slider  images={secondSlider} />  
+                </div>
             </div>
         </div>
     );

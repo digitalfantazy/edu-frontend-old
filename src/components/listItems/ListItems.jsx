@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 import { EXPANDLISTLABS } from "../../utils/constants";
-import { toggleListOpen } from "../../store/listReducer";
+import { toggleListOpen } from "../../store/reducers/listReducer";
 
 import arrowImage from "../../img/arrow-down.svg";
 
@@ -40,7 +40,7 @@ const ListItems = ({ title }) => {
           {list.map(({ name, link }) => (
             <li key={name}>
               <NavLink
-                to={`/${link}`}
+                to={`/${link}/programa`}
                 className="group__items"
               >
                 {name}

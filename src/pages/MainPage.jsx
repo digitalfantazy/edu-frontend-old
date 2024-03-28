@@ -5,6 +5,7 @@ import { useRef } from "react";
 
 import Intro from "../components/introBlock/Intro";
 import Catalog from "../components/catalog/Catalog";
+import PrivateRoute from "../utils/privateRoute";
 
 function MainPage() {
 
@@ -17,7 +18,7 @@ function MainPage() {
       <div className="MainPage">
 
         <Intro scrollToCatalog={scrollToCatalog}/>
-        <Catalog ref={ref} />
+        <PrivateRoute element={<Catalog ref={ref} />} /> 
 
         
 

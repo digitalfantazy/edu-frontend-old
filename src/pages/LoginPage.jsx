@@ -1,64 +1,116 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+
+// import { formatErrorMessage } from "../utils/formatErrorMessage";
+import { resetRegistered,login,clearError,} from "../store/reducers/authSlice";
 
 import SignUpButton from "../UI/SignUpButton";
 
-
 const LoginPage = () => {
+  const dispatch = useDispatch();
+  const { loading, isAuthenticated, registered, error } = useSelector(
+    (state) => state.auth
+  );
 
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [redirect, setRedirect] = useState(false);
-    
-    const submit = async (event) => {
-        event.preventDefault();
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
 
-        await fetch('http://localhost:8000/api/login', {
-            method: 'POST',
-            headers: {'Content-Type': 'aplication/json'},
-            credentials: 'include',
-            body: JSON.stringify({
-                email,
-                password
-            })
-        });
+  useEffect(() => {
+    if (registered) dispatch(resetRegistered());
+  }, [dispatch, registered]);
 
-        setRedirect(true)
-    }
+  const { username, password } = formData;
 
-    if (redirect) {
-        return <Navigate to="/"/>;
-        }
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
-    return (
-        <div className="login-form">
-            <form className="form-signin" onSubmit={submit}>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(error);
 
-                <h1 className="login-title">Вход</h1>
-            
-                <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" 
-                    onChange={e => setEmail(e.target.value)}/>
+    dispatch(clearError());
 
-                    <label htmlFor="floatingInput">Адрес электроной почты</label>
-                </div>
-                <div className="form-floating">
-                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password" 
-                    onChange={e => setPassword(e.target.value)} />
+    dispatch(login({ username, password }));
+  };
 
-                    <label htmlFor="floatingPassword">Пароль</label>
-                </div>
-            
-                <button className="btn btn-login" type="submit">Войти</button>
+  if (isAuthenticated) {
+    return <Navigate to="/" />;
+  }
 
-                <div className="sign-up">
-                    <p>Еще не зарегистрированы?</p>
-                    <SignUpButton />
-                </div>
-            </form>
+  return (
+    <div className="login-form">
+      <form className="form-signin" onSubmit={handleSubmit}>
+        <h1 className="login-title">Вход</h1>
+
+        <div className="form-floating">
+          <input
+            name="username"
+            type="text"
+            className="form-control"
+            id="floatingInput"
+            value={username}
+            onChange={handleChange}
+            style={
+                error
+                  ? { backgroundColor: "rgba(244, 68, 68, 0.203)" }
+                  : {}
+              }
+          />
+
+          <label htmlFor="floatingInput">Имя пользователя</label>
         </div>
-            
-    );
-}
- 
+        <div className="form-floating">
+          <input
+            name="password"
+            type="password"
+            className="form-control"
+            id="floatingPassword"
+            onChange={handleChange}
+            style={
+                error 
+                  ? { backgroundColor: "rgba(244, 68, 68, 0.203)" }
+                  : {}
+              }
+          />
+
+          <label htmlFor="floatingPassword">Пароль</label>
+        </div>
+        {error && (
+          <>
+            <div>
+              <p className="error-message">
+                {error === "No active account found with the given credentials"
+                  ? "Неверное имя пользователя или пароль"
+                  : error}
+              </p>
+            </div>
+          </>
+        )}
+        {loading ? (
+          <div className="loading">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        ) : (
+          <div className="btn1">
+            <button className="btn btn-login" type="submit">
+              Войти
+            </button>
+            <div className="sign-up">
+              <p>Еще не зарегистрированы?</p>
+              <SignUpButton />
+            </div>
+          </div>
+        )}
+      </form>
+    </div>
+  );
+};
+
 export default LoginPage;

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const SignUp = () => {
   return (
     
-      <a href="#/reg" className="registration">Создать аккаунт</a>
+      <Link to="/register" className="registration">Создать аккаунт</Link>
 
   );
 }

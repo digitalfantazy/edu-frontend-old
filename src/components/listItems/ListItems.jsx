@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
 
 import { EXPANDLISTLABS } from "../../utils/constants";
+import { toggleListOpen } from "../../store/reducers/listReducer";
 
 import arrowImage from "../../img/arrow-down.svg";
-import { NavLink } from "react-router-dom";
 
 const ListItems = ({ title }) => {
 
+  const isOpen = useSelector(state => state.list[title]);
+  const dispatch = useDispatch();
 
-  const setActiveLink = ({isActive}) => () => isActive ? 'active-link' : '';
 
-
-  const [isOpen, setOpen] = useState(true);
 
   const list = EXPANDLISTLABS[title] || [];
 
@@ -19,9 +21,9 @@ const ListItems = ({ title }) => {
     <fieldset className="fieldset">
       <legend>
         <button
-          className={`expand-collapse-button ${!isOpen ? "open" : ""}`}
+          className={`expand-collapse-button ${isOpen ? "open" : ""}`}
           onClick={() => {
-            setOpen(!isOpen);
+            dispatch(toggleListOpen({title}));
           }}
         >
           <h3 className="lab-name">{title}</h3>
@@ -33,12 +35,12 @@ const ListItems = ({ title }) => {
         </button>
       </legend>
 
-      <div className={`group ${!isOpen ? "group-open" : ""}`}>
-        <ul className={`group__links ${!isOpen ? "group-open" : ""}`}>
+      <div className={`group ${isOpen ? "group-open" : ""}`}>
+        <ul className={`group__links ${isOpen ? "group-open" : ""}`}>
           {list.map(({ name, link }) => (
             <li key={name}>
               <NavLink
-                to={`${link}`}
+                to={`/${link}/programa`}
                 className="group__items"
               >
                 {name}

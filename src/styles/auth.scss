@@ -26,6 +26,14 @@
     margin-bottom: 15px;
 }
 
+.form-control.error {
+  background-color: rgba(244, 68, 68, 0.961)
+}
+
+.form-floating>.form-control:not(:placeholder-shown)~label::after {
+  background-color: transparent
+}
+
 .form-signin .form-floating:focus-within {
   z-index: 2;
 }
@@ -74,4 +82,15 @@
   
   .registration:hover {
     background: rgb(228, 74, 74);
+}
+
+.loading {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.error-message {
+  text-align: center;
+  color: red
 }

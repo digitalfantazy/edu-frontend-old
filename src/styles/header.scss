@@ -92,3 +92,40 @@
   background-color: var(--button-color-hover);
 }
 
+.logout-button {
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(127, 86, 217, 1);
+  border-radius: 150px;
+  color: var(--color-white);
+  padding: 10px 15px 10px 15px;
+  transition: all 0.3s;
+  width: 80px;
+}
+
+.logout-button:hover {
+  background-color: var(--button-color-hover);
+}
+
+
+.auth {
+  display: flex;
+  align-items: center
+
+}
+
+.hello-message {
+  margin-bottom: 0;
+  margin-right: 15px;
+  text-align: center;
+  font: 400 17px / 140% var(--font-family);
+  color: var(--color-white);
+}
+
+.logout {
+  cursor: pointer;
+}

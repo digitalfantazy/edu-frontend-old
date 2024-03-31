@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Router from "./Router";
@@ -14,11 +14,11 @@ function App() {
   })
     
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="App">
         <Router/>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

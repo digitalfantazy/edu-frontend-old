@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 
+import { getPDF } from '../../store/reducers/pdfSlice';
 // import catalogImage1 from '../../img/kasandra.png'
 
 const Labs = () => {
@@ -8,6 +10,26 @@ const Labs = () => {
     // console.log(labId)
     // console.log(param)
 
+    const dispatch = useDispatch()
+    const pdfUrl = useSelector(state => state.pdf.pdfUrl);
+
+    useEffect(() => {
+        const allowedLinks = [
+            { labId: "NR2000", param: "about" },
+            { labId: "linanalyz", param: "about" },
+            // Добавьте другие разрешенные комбинации параметров здесь
+        ];
+
+        const isAllowedLink = allowedLinks.some(link => link.labId === labId && link.param === param);
+
+        if (isAllowedLink && !pdfUrl) {
+            dispatch(getPDF({ labId, param }));
+        }
+    }, [dispatch, labId, param, pdfUrl])
+
+    // console.log(pdfUrl)
+    // console.log(URL.createObjectURL(pdfData))
+    
     let infoText = "";
 
     if (labId === "NR2000") {
@@ -26,7 +48,20 @@ const Labs = () => {
                 </div>
             );
         } else if (param === "about") {
-            infoText = "Тут информация про NR2000";
+            return (
+                <div className="catalog-labs">
+                    {pdfUrl ? (
+                    <embed
+                         src={pdfUrl}
+                         width="1000"
+                         height="800"
+                         type="application/pdf"
+                     />
+                    ) : (
+                    <p className='sims-title'>{infoText}</p>
+                    )}
+                </div>
+            );
         } else if (param === "info") {
             infoText = "Технические характеристики";
         }

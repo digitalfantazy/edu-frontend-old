@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const SingInButton = () => {
     return (
-        <a href="/login" className="sign-in-button">Войти</a>
+        <Link to="/login" className="sign-in-button">Войти</Link>
     );
 }
  

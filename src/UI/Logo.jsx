@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+
 
 const Logo = () => {
     return (
     <div className="header__logo"> 
-        <Link to="/" className="logo" >
+        <a className="logo" href="/">
             VirtLab
-        </Link>
+        </a>
     </div>
     );
 }

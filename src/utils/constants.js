@@ -14,8 +14,8 @@ import lab12 from '../img/lab12.png';
 import lab13 from '../img/lab13.png';
 import lab14 from '../img/lab14.png';
 
-// export const API_URL = "http://127.0.0.1:8000"
-export const API_URL = "https://backend1-production-ac0a.up.railway.app"
+export const API_URL = "http://127.0.0.1:8000"
+// export const API_URL = "https://backend1-production-9b7e.up.railway.app"
 
 export const MENU = [
     {

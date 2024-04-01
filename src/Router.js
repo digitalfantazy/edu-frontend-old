@@ -40,7 +40,6 @@ const Router = () => {
             <>
               <Intro />
               <PrivateRoute element={<Catalog />} />
-              {/* <Catalog /> */}
             </>
           }
         />

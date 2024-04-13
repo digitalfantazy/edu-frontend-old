@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import listReducer from "../store/reducers/listReducer";
-import authSlice from "../store/reducers/authSlice";
+import { authSlice } from "../modules/Auth/store/index";
 import pdfReducer from "../store/reducers/pdfSlice";
 
 

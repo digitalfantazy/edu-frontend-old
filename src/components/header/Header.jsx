@@ -6,7 +6,7 @@ import Logo from "../../UI/Logo";
 import NavBar from "../navbar/NavBar";
 import SingInButton from "../../UI/SingInButton";
 // import LogOutButton from "../../UI/LogOutButton";
-import { logout } from "../../store/reducers/authSlice";
+import { logout } from "../../modules/Auth/store/auth/authSlice";
 
 const Header = () => {
   const user = useSelector((state) => state.auth.user);
@@ -21,7 +21,7 @@ const Header = () => {
 
           <NavBar />
 
-          <div className="auth">
+          <div className="auth-name">
             {user && <p className="hello-message">Привет {user.username.charAt(0).toUpperCase() + user.username.slice(1)}!</p>}
             {user ? (
               <LogoutIcon

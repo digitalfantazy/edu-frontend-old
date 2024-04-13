@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Router from "./Router";
-import { checkAuth } from "./store/reducers/authSlice";
+import { checkAuth } from "./modules/Auth/api/checkAuthFetch";
 
 function App() {
 

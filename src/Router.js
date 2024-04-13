@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
+import AuthPage from "./pages/AuthPage";
 import MainPage from "./pages/MainPage";
-import SingUpPage from "./pages/SingUpPage";
+// import SingUpPage from "./pages/SingUpPage";
 import SimsPage from "./pages/SimsPage";
 import ProffesorPage from "./pages/ProffesorPage";
 import StudentPage from "./pages/StudentPage";
@@ -19,8 +19,8 @@ const Router = () => {
       <Header />
       <Routes>
         <Route exact path="/" element={<MainPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="register" element={<SingUpPage />} />
+        <Route path="auth" element={<AuthPage />} />
+        {/* <Route path="register" element={<SingUpPage />} /> */}
         <Route
           path="sims-page"
           element={<PrivateRoute element={<SimsPage />} />}

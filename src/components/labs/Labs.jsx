@@ -38,6 +38,7 @@ const Labs = () => {
             return (
                 <div className="catalog-labs">
                     <iframe
+                        className='catalog-frame'
                         title='App'
                         src="/nr2000/views/intro.html" // Примерный путь к вашему HTML-файлу внутри iframe
                         width="1000"

@@ -3,7 +3,7 @@
 @import "./intro.scss";
 @import "./catalog.scss";
 @import "./labs.scss";
-@import "./auth.scss";
+// @import "./auth.scss";
 @import "./sims-overview.scss";
 @import "./labnav.scss";
 @import "./notAuthorized.scss";
@@ -21,7 +21,7 @@
 
 :root {
 	--font-family: "Intro", sans-serif;
-	--color-white: rgba(251, 251, 255, 1);
+	--color-white: #fff;
 	--button-color: rgba(127, 86, 217, 1);
 	--button-color-hover: rgb(112, 74, 189);
 	--background--color: #484283;
@@ -34,6 +34,8 @@ body {
     font-family: var(--font-family);
     background-color:  var(--color-white);
 	margin: 0;
+	// background-color: #c9d6ff;
+	// background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
 
 

@@ -1,4 +1,4 @@
-import SliderArrows from "../UI/SliderArrows";
+import SliderArrows from "../../UI/SliderArrows";
 
 export const sliderSettings = {
     dots: true,

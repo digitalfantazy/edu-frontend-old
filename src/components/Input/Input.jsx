@@ -5,20 +5,21 @@ const Input = ({
   type,
   value,
   onChange,
+  className,
   placeholder,
   required,
   error,
 }) => {
+
   return (
     <input
       name={name}
       type={type}
-      className="form-control"
+      className={className}
       value={value}
       onChange={onChange}
       placeholder={placeholder}
       required={required}
-      style={error ? { backgroundColor: "rgba(244, 68, 68, 0.203)" } : {}}
     />
   );
 };

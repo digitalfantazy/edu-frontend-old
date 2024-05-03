@@ -26,7 +26,7 @@ const TogglePanel = ({ activeForm, handleToggleClick }) => {
               )
             }
           >
-            {activeForm === "sign-in" ? "Войти" : "Зарегистрироваться"}
+            {activeForm === "sign-in" ? "Зарегистрироваться" : "Войти"}
           </button>
         </div>
       </div>

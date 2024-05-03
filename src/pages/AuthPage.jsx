@@ -1,4 +1,3 @@
-
 import AuthContainer from "../modules/Auth";
 
 const AuthPage = () => {

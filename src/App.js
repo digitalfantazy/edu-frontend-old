@@ -10,8 +10,19 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(checkAuth())
-  })
+
+    dispatch(checkAuth());
+
+
+    const intervalId = setInterval(() => {
+      dispatch(checkAuth());
+    }, 1740000); // 29 минут
+
+    // Функция очистки, которая будет вызвана при размонтировании компонента
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [dispatch]);
     
   return (
     <BrowserRouter>

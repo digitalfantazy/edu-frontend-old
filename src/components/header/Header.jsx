@@ -1,17 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
 import LogoutIcon from "@mui/icons-material/Logout";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import Logo from "../../UI/Logo";
 import NavBar from "../navbar/NavBar";
-import SingInButton from "../../UI/SingInButton";
-// import LogOutButton from "../../UI/LogOutButton";
-import { logout } from "../../modules/Auth/store/auth/authSlice";
+import SignInButton from "../../UI/SignInButton";
+import { logout } from "../../modules/Auth/index";
 
 const Header = () => {
   const user = useSelector((state) => state.auth.user);
+  // console.log(user)
   const dispatch = useDispatch();
 
+  const formatName = (fullName) => {
+    const names = fullName.split(" ");
+    if (names.length === 3) {
+      return `${names[1]} ${names[0].charAt(0)}. ${names[2].charAt(0)}.`; 
+    }
+    return fullName; 
+  };
 
   return (
     <header className="header">
@@ -21,16 +31,24 @@ const Header = () => {
 
           <NavBar />
 
-          <div className="auth-name">
-            {user && <p className="hello-message">Привет {user.username.charAt(0).toUpperCase() + user.username.slice(1)}!</p>}
+          <div className="auth-logo">
             {user ? (
-              <LogoutIcon
-                onClick={() => dispatch(logout())}
-                className="logout"
-                sx={{ color: "white" }}
-              />
+              <>
+                <Link to="/profile">
+                  <p className="hello-message">
+                    <AccountCircleIcon className="profile-icon" />
+                    {formatName(user.name)}
+                  </p>
+                </Link>
+
+                <LogoutIcon
+                  onClick={() => dispatch(logout())}
+                  className="logout"
+                  sx={{ color: "white" }}
+                />
+              </>
             ) : (
-              <SingInButton />
+              <SignInButton />
             )}
           </div>
         </div>

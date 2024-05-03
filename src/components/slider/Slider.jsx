@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import CustomTooltip from "../../UI/CustomToolTip";
-import { sliderSettings } from "../../utils/sliderSettings";
+import { sliderSettings } from "./sliderSettings";
 
 
 

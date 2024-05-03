@@ -4,17 +4,17 @@ import { API_URL } from "../../utils/constants";
 
 export const getPDF = createAsyncThunk(
     "pdf/getPDF",
-    async ({ labId, param}, thunkAPI) => {
+    async ({ labId, param }, thunkAPI) => {
         try {
             const res = await fetch(`${API_URL}/api/pdf/${labId}/${param}`, {
                 method: "GET",
                 headers: {
-                    'Accept': 'application/pdf'
+                Authorization: `Bearer ${localStorage.getItem("access")}`,   
                 }
             })
-            console.log(res)
+            // console.log(res)
             const data = await res.blob();
-            console.log(data)
+            // console.log(data)
 
             if (res.status === 200) {
                 return URL.createObjectURL(data);

@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { API_URL } from "../../../utils/constants.js";
 import { getUser } from "./getUserFetch.js";
 import { refreshToken } from "./refreshTokenFetch.js";
-import { setAuthenticated } from "../store/auth/authSlice";
+import { setAuthenticated } from "../store/authSlice.js";
 
 
 export const checkAuth = createAsyncThunk(
@@ -12,7 +12,8 @@ export const checkAuth = createAsyncThunk(
         // const refresh = Cookies.get('refresh_token')
         const access = localStorage.getItem("access");
         // console.log(access)
-        const res = await fetch(`${API_URL}/api/token/verify/`, {
+        // console.log(access)
+        const res = await fetch(`${API_URL}/api/auth/token/verify/`, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -24,17 +25,18 @@ export const checkAuth = createAsyncThunk(
         const data = await res.json();
   
         if (res.status === 200) {
-          console.log("прошел запрос check");
-          const { dispatch } = thunkAPI;
+          // console.log("прошел запрос check");
+          // const { dispatch } = thunkAPI;
   
-          dispatch(getUser());
-          dispatch(setAuthenticated(true));
-  
+          thunkAPI.dispatch(getUser());
+          thunkAPI.dispatch(setAuthenticated(true));
+          // console.log(data)
           return data;
         } else if (res.status === 401) {
-          const refreshTokenResult = await thunkAPI.dispatch(refreshToken());
+          const refreshTokenResult = thunkAPI.dispatch(refreshToken());
           if (refreshTokenResult.meta.requestStatus === "fulfilled") {
-            return thunkAPI.dispatch(checkAuth());
+            // console.log(data)
+            return data;
           } else {
             return thunkAPI.rejectWithValue(data);
           }

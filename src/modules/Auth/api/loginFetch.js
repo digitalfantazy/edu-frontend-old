@@ -10,9 +10,12 @@ export const login = createAsyncThunk(
       username,
       password,
     });
+    // let allCookies = '';
+    // allCookies = document.cookie;
+    // console.log(allCookies)
 
     try {
-      const res = await fetch(`${API_URL}/api/token/`, {
+      const res = await fetch(`${API_URL}/api/auth/token/`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -23,7 +26,7 @@ export const login = createAsyncThunk(
       });
 
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
 
       if (res.status === 200) {
         const { dispatch } = thunkAPI;
@@ -34,7 +37,7 @@ export const login = createAsyncThunk(
         // dispatch(setAuthenticated(true));
         return data;
       } else {
-        console.log(data);
+        // console.log(data);
         return thunkAPI.rejectWithValue(data.detail);
       }
     } catch (err) {

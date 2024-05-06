@@ -1,14 +1,15 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
-import listReducer from "../store/reducers/listReducer";
-import authSlice from "../store/reducers/authSlice";
+// import listReducer from "../store/reducers/listReducer";
+import { authSlice } from "../modules/Auth/index";
+import { catalogSlice } from "../modules/Catalog/index";
 
 
 
 
 const rootReducer = combineReducers({
     auth: authSlice,
-    list: listReducer,
+    catalog: catalogSlice
 });
 
 const store = configureStore({

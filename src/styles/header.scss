@@ -112,20 +112,26 @@
 }
 
 
-.auth {
+.auth-logo {
   display: flex;
   align-items: center
-
 }
 
 .hello-message {
   margin-bottom: 0;
   margin-right: 15px;
-  text-align: center;
-  font: 400 17px / 140% var(--font-family);
+  margin-left: 10px;
+  text-align: bottom;
+  font: 400 19px / 140% var(--font-family);
   color: var(--color-white);
 }
 
+.profile-icon {
+  margin-right: 5px;
+}
+
 .logout {
+  margin-left: 5px;
   cursor: pointer;
 }
+

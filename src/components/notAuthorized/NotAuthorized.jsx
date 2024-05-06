@@ -1,6 +1,6 @@
 import React from "react";
 
-import SingInButton from "../../UI/SingInButton";
+import SingInButton from "../../UI/SignInButton";
 
 const NotAuthorized = () => {
     return ( <div className="alert-messagecontainer">

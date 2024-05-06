@@ -1,14 +1,9 @@
 import Slider from "../components/slider/Slider";
-import { IMAGES } from "../utils/constants";
+
+import { E_Textbooks, OP, PT } from "../modules/Catalog/index";
 
 const SimsPage = () => {
 
-    const filterImagesById = (startId, endId) => {
-        return IMAGES.filter(image => image.id >= startId && image.id <= endId);
-      };
-
-    const firstSlider = filterImagesById(1, 7);
-    const secondSlider = filterImagesById(8, 14);
 
 
     return (
@@ -16,17 +11,17 @@ const SimsPage = () => {
             <div className="container">
                 <div className="slider-item">       
                     <h1 className="title">Электоронные учебные пособия</h1>
-                    <Slider images={firstSlider} />              
-                </div>
-
-                <div className="slider-item">
-                    <h1 className="title">Программные тренажеры</h1>
-                    <Slider  images={secondSlider} />  
+                    <Slider images={E_Textbooks} />              
                 </div>
 
                 <div className="slider-item">
                     <h1 className="title">Обучающие программы</h1>
-                    <Slider  images={secondSlider} />  
+                    <Slider  images={OP} />  
+                </div>
+
+                <div className="slider-item">
+                    <h1 className="title">Программные тренажеры</h1>
+                    <Slider  images={PT} />  
                 </div>
             </div>
         </div>

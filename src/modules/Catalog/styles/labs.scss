@@ -1,0 +1,53 @@
+.catalog-labs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-column: 9 span;
+}
+
+
+.catalog-list {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.catalog-list__item {
+	grid-column: 3 span;
+}
+
+.sims-item {
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #d2d2d2;
+	transition: box-shadow 0.3s ease;
+}
+
+.sims-item:hover {
+	box-shadow: 0 0 6px 3px #d2d2d2
+}
+
+.sims__image {
+	position: relative;
+	width: 280px;
+	max-height: 293px;
+}
+
+.information {
+	text-align: center;
+	border-top: 1px solid #d2d2d2;
+	height: 85px;
+}
+
+.sims-title {
+	padding-top: 5px;
+    padding-bottom: 5px;
+	padding-left: 7px;;
+    flex-grow: 1;
+    align-items: center;
+	font:  500 18px/ 140% var(--font-family);
+	transition: color 0.3s ease;
+}
+
+.sims-item:hover .sims-title {
+	color: var(--button-color-hover)
+}

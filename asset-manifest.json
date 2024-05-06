@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ffc6299.css",
-    "main.js": "/static/js/main.43730f9f.js",
+    "main.js": "/static/js/main.858ad154.js",
     "static/media/navigator-PH.png": "/static/media/navigator-PH.94694982c95b1121c6f0.png",
     "static/media/PVKV_FURUNO_GMSSB.png": "/static/media/PVKV_FURUNO_GMSSB.bf59d287a8dc81ef1f6a.png",
     "static/media/videolocator.png": "/static/media/videolocator.e9acdc16d320498224ba.png",
@@ -35,10 +35,10 @@
     "index.html": "/index.html",
     "static/media/arrow-down.svg": "/static/media/arrow-down.d7c25147326015b5450018f50e276eb1.svg",
     "main.2ffc6299.css.map": "/static/css/main.2ffc6299.css.map",
-    "main.43730f9f.js.map": "/static/js/main.43730f9f.js.map"
+    "main.858ad154.js.map": "/static/js/main.858ad154.js.map"
   },
   "entrypoints": [
     "static/css/main.2ffc6299.css",
-    "static/js/main.43730f9f.js"
+    "static/js/main.858ad154.js"
   ]
 }

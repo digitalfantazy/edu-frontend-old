@@ -1,10 +1,9 @@
 @import "./header.scss";
 @import "./intro.scss";
-@import "./catalog.scss";
-@import "./labs.scss";
-// @import "./auth.scss";
+
+
 @import "./sims-overview.scss";
-@import "./labnav.scss";
+
 @import "./notAuthorized.scss";
 
 @font-face {
@@ -67,12 +66,13 @@ h2 {
   border: 0px solid;
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1500px;
+  max-width: 1600px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  height: 1000px;
 }
 
 .error-message {

@@ -9,7 +9,7 @@ import ProffesorPage from "./pages/ProffesorPage";
 import StudentPage from "./pages/StudentPage";
 
 import Header from "./components/header/Header";
-import Catalog from "./components/catalog/Catalog";
+import Catalog from "./modules/Catalog/index";
 import Intro from "./components/introBlock/Intro";
 import { PrivateRoute } from "./utils/privateRoute";
 import ProfilePage from "./pages/ProfilePage";

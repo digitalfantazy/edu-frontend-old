@@ -7,6 +7,7 @@ const CustomTooltip = styled(({ className, ...props }) => (
 ))({
   [`& .${tooltipClasses.tooltip}`]: {
     maxWidth: 300,
+    fontSize: '16px',
   },
 });
 

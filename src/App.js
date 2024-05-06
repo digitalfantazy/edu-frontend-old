@@ -3,7 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Router from "./Router";
-import { checkAuth } from "./modules/Auth/api/checkAuthFetch";
+import { checkAuth } from "./modules/Auth/index";
+import { refreshToken } from "./modules/Auth/index";
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
 
 
     const intervalId = setInterval(() => {
-      dispatch(checkAuth());
+      dispatch(refreshToken());
     }, 1740000); // 29 минут
-
+    // 1740000
     // Функция очистки, которая будет вызвана при размонтировании компонента
     return () => {
       clearInterval(intervalId);

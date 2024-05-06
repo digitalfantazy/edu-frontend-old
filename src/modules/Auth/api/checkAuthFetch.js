@@ -12,7 +12,6 @@ export const checkAuth = createAsyncThunk(
         // const refresh = Cookies.get('refresh_token')
         const access = localStorage.getItem("access");
         // console.log(access)
-        // console.log(access)
         const res = await fetch(`${API_URL}/api/auth/token/verify/`, {
           method: "POST",
           headers: {
@@ -25,7 +24,7 @@ export const checkAuth = createAsyncThunk(
         const data = await res.json();
   
         if (res.status === 200) {
-          // console.log("прошел запрос check");
+          console.log("прошел запрос check");
           // const { dispatch } = thunkAPI;
   
           thunkAPI.dispatch(getUser());

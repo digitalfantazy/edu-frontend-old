@@ -14,6 +14,7 @@ import Intro from "./components/introBlock/Intro";
 import { PrivateRoute } from "./utils/privateRoute";
 import ProfilePage from "./pages/ProfilePage";
 import Public from "./utils/PublicOnly";
+import LABA from "./modules/Catalog/components/Labs/LABA";
 
 const Router = () => {
   return (
@@ -36,6 +37,7 @@ const Router = () => {
         <Route path="student" element={<PrivateRoute element={<StudentPage />} />} />
 
         <Route path="profile" element={<PrivateRoute element={<ProfilePage />} />} />
+        <Route path="LABA" element={<PrivateRoute element={<LABA />} />} />
 
         <Route
           path="/:labId/:param"

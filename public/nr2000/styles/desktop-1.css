@@ -1,17 +1,19 @@
-* {
-	margin: 0;
-	padding: 0;
+@font-face {
+
+  font-family: Intro;
+  src: url(../font/intro-regular.ttf);
 }
 
 body {
-  height: auto;
-  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+  font-family: "Intro", sans-serif;
   margin: 0;
   overflow: hidden;
+  background: url(../assets/intro.png);
+  background-size: 1300px 1000px;
 }
 
 .header {
@@ -20,54 +22,97 @@ body {
   text-align: center;
   font-size: 30pt;
   font-weight: 700;
-  color: #572380;
+  color: #484282;
   flex-shrink: 0;
 }
 
 .button {
   border: none;
-  width: 500px;
+  width: 450px;
   height: 80px;
   border-radius: 12px;
   text-align: center;
   display: inline-block;
   font-size: 20pt;
   cursor: pointer;
-}
-
-.button1 {
-  background-color: #572380;
+  font-family: "Intro", sans-serif;
+  background-color: #484282;
   color: white; 
 }
 
-.button1:hover {
-  background-color: #e69b45;
+.button:hover {
+  background-color: #7E77B8;
   color: white;
 }
 
-.desktop_1 {
-  height: 800;
-  width: 1000;
-  position: static;
-  /* align-items: center;
-  display: flex;
-  flex-direction: column; */
-}
- 
-.group_main_menu {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-}
 
 .group_menu_buttons {
-  margin-right: 20px;
+  display: flex;
+  position: fixed;
+  left: 1.5%;
+  top: 5%;
+
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.group_menu_image{
+  margin-right: 1%;
   row-gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.image {
-  width: 50px;
-  height: 50px;
+
+.button-desktop-3{
+  border: none;
+  width: 450px;
+  height: 120px;
+  border-radius: 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20pt;
+  cursor: pointer;
+  font-family: "Intro", sans-serif;
+  background-color: #484282;
+  color: white; 
+}
+
+.button-desktop-3:hover {
+  background-color: #7E77B8;
+  color: white;
+}
+
+.button-menu{
+  border: none;
+  width: 450px;
+  height: 80px;
+  border-radius: 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20pt;
+  cursor: pointer;
+  font-family: "Intro", sans-serif;
+  background-color: #484282;
+  color: white; 
+  margin-top: 30px;
+  /* position: fixed;
+  bottom: 5%;
+  left: 5%; */
+}
+
+.button-menu:hover {
+  background-color: #7E77B8;
+  color: white;
+}
+
+.footer {
+  background-color: #F2F2F2;
+  border-radius: 20px 20px 0 0;
+  position: fixed;
+  bottom: 0;
+  width: 27%;   
+  align-self: center;
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/desktop-2-5.css"/>
+</head>
+<body>
+<div class="desktop_2-1">
+  <p class="header">Перечень оборудования</p>
+  <div class="desktop-2-3">
+    
+    <img class="image" id='theImg' src="../assets/map_asset.jpeg" width="900">
+    <canvas class="canvas" id='myCanvas' width='900' height='713'></canvas>
+    <div class="table-desktop-2-3" id="tableInfo">
+      <table >  
+      <tbody>
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(473, 636)' onmouseout="Clear()">
+            <td>1</td>    
+            <td><a href="desktop-5.html">Блок радиолокационный </a> </td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(408, 400)' onmouseout="Clear()">
+            <td>2</td>
+            <td>Аккумулятор Soshine 18650</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(796, 53)' onmouseout="Clear()">
+            <td>3</td>
+            <td><a href="desktop-5-4.html">Телефоны головные</a></td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(238, 625)' onmouseout="Clear()">
+            <td>4</td>
+            <td>Фонарь</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(738, 632)' onmouseout="Clear()">
+            <td>5</td>
+            <td>Кронштейн</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(755, 265)' onmouseout="Clear()">
+            <td>6</td>
+            <td>Зарядное устройство Soshine SC-S1 с адаптерами: сетевым (9) и автомобильным (10) </td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(31, 623)' onmouseout="Clear()">
+            <td>7</td>
+            <td>Имитатор</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(61, 100)' onmouseout="Clear()">
+            <td>8</td>
+            <td>Сумка-укладка</td>
+          </tr>
+  
+      </tbody>
+      </table>
+    </div>
+    
+   
+  </div>
+  <div class="footer">
+   
+    <button class="button" onclick="nextPage('desktop-2.html')">Меню</button>
+    
+  </div>
+  
+</div>
+<script src="../app/circleDraw.js"></script>
+</body>
+</html>

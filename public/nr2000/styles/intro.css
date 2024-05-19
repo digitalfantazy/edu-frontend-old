@@ -1,32 +1,26 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+@font-face {
+
+  font-family: Intro;
+  src: url(../font/intro-regular.ttf);
+  }
 
 body {
-  height: auto;
-  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Intro", sans-serif;
   margin: 0;
 }
 
 .header {
-  align-items: center;
   font-size: 24pt;
   font-weight: 550;
-  color: #572380;
-}
-
-.intro-img { 
-  cursor: pointer;
+  color: #484282;
 }
 
 .button {
-  border: solid 5px #572380;
+  border: solid 5px #484282;
   align-self: center;
   cursor: pointer;
   appearance: none;
@@ -34,7 +28,7 @@ body {
 }
 
 .button1 {
-  border: solid 5px #572380;
+  border: solid 5px #484282;
 }
 
 .button1:hover {

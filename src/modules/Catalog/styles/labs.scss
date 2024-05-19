@@ -5,6 +5,13 @@
 	grid-column: 9 span;
 }
 
+.catalog-labs1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 150px;
+}
+
 
 .catalog-list {
 	grid-template-columns: repeat(9, 1fr);

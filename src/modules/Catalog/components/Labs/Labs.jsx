@@ -7,7 +7,7 @@ import { getPDF } from "../../index";
 import { clearPdfUrl } from "../../store/catalogSlice";
 import Loading from "../../../../components/loading/Loading";
 
-import img from "../../../../img/ElectronicTextbooks/INMARSAT.png"
+import img from "../../../../img/ElectronicTextbooks/INMARSAT.png";
 
 import "../../styles/labs.scss";
 
@@ -52,13 +52,19 @@ const Labs = () => {
     if (param === "programa") {
       // infoText = "Тут информация про ПО NR2000";
       return (
+        // <div>
+        //   <a href="/LABA" target="_blank" rel="noopener noreferrer">
+        //     Открыть пример в новой вкладке
+        //   </a>
+        // </div>
+
         <div className="catalog-labs">
           <iframe
             className="catalog-frame"
             title="App"
-            src="/nr2000/views/intro.html" // Примерный путь к вашему HTML-файлу внутри iframe
-            width="1100"
-            height="800"
+            src="/nr2000/views/desktop-1.html" // Примерный путь к вашему HTML-файлу внутри iframe
+            width="1300"
+            height="1000"
           />
         </div>
       );
@@ -66,7 +72,7 @@ const Labs = () => {
       return (
         <div className="catalog-labs">
           {pdfUrl ? (
-            <PDF key={pdfUrl} src={pdfUrl} width="1100" height="1000" type="application/pdf" />
+            <PDF key={pdfUrl} src={pdfUrl} width="1100" height="900" type="application/pdf" />
           ) : loading ? (
             <Loading />
           ) : (

@@ -7,3 +7,6 @@ function nextPage(target){
     window.location.href= `./${target}`;
 }
 
+function closeWindow() {
+    window.close();
+}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ffc6299.css",
-    "main.js": "/static/js/main.858ad154.js",
+    "main.css": "/static/css/main.9f3897f5.css",
+    "main.js": "/static/js/main.a6c215a8.js",
     "static/media/navigator-PH.png": "/static/media/navigator-PH.94694982c95b1121c6f0.png",
     "static/media/PVKV_FURUNO_GMSSB.png": "/static/media/PVKV_FURUNO_GMSSB.bf59d287a8dc81ef1f6a.png",
     "static/media/videolocator.png": "/static/media/videolocator.e9acdc16d320498224ba.png",
@@ -10,6 +10,7 @@
     "static/media/PracticalRadioElectr.png": "/static/media/PracticalRadioElectr.66f183c7d035c579bb1d.png",
     "static/media/PVKV_RADIO_GMSSB.png": "/static/media/PVKV_RADIO_GMSSB.90dc6badc6cd3062d674.png",
     "static/media/DSC-PC-1565.png": "/static/media/DSC-PC-1565.285e723ecbc8025c4a38.png",
+    "static/media/NR-2000.png": "/static/media/NR-2000.ae1c5b2287608772eadd.png",
     "static/media/nr900.png": "/static/media/nr900.b0b6f9af35eb0fedbb2b.png",
     "static/media/sonata-ab.png": "/static/media/sonata-ab.e305c2e8ba61f07db78e.png",
     "static/media/sinerget.png": "/static/media/sinerget.e5a8af2ad81a4c510e76.png",
@@ -25,7 +26,6 @@
     "static/media/lornet.png": "/static/media/lornet.e07098919c0716ef7b25.png",
     "static/media/INMARSAT.png": "/static/media/INMARSAT.b1b232dd98f1e34ec70d.png",
     "static/media/signal-20m.png": "/static/media/signal-20m.200eaf2df3a2bc7cc700.png",
-    "static/media/NR-2000.png": "/static/media/NR-2000.26da73ec303d08f70a7c.png",
     "static/media/intro-regular.woff": "/static/media/intro-regular.c974876ba1d55827ca57.woff",
     "static/media/intro-regular.woff2": "/static/media/intro-regular.97a9748a613afa94e08f.woff2",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -34,11 +34,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "static/media/arrow-down.svg": "/static/media/arrow-down.d7c25147326015b5450018f50e276eb1.svg",
-    "main.2ffc6299.css.map": "/static/css/main.2ffc6299.css.map",
-    "main.858ad154.js.map": "/static/js/main.858ad154.js.map"
+    "main.9f3897f5.css.map": "/static/css/main.9f3897f5.css.map",
+    "main.a6c215a8.js.map": "/static/js/main.a6c215a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ffc6299.css",
-    "static/js/main.858ad154.js"
+    "static/css/main.9f3897f5.css",
+    "static/js/main.a6c215a8.js"
   ]
 }

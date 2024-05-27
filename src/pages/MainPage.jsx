@@ -1,29 +1,16 @@
 import React from "react";
-import { useRef } from "react";
-
-
 
 import Intro from "../components/introBlock/Intro";
-import Catalog from "../modules/Catalog/index"
+import Catalog from "../modules/Catalog/index";
 import PrivateRoute from "../utils/privateRoute";
 
-function MainPage() {
+function MainPage({ refProp, scrollToCatalog }) {
+  return (
+    <div className="MainPage">
+      <Intro scrollToCatalog={scrollToCatalog} />
+      <PrivateRoute element={<Catalog refProp={refProp} />} />
+    </div>
+  );
+}
 
-  const ref = useRef(null)
-  const scrollToCatalog = () => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
-  };
-
-    return (
-      <div className="MainPage">
-
-        <Intro scrollToCatalog={scrollToCatalog}/>
-        <PrivateRoute element={<Catalog ref={ref} />} /> 
-
-        
-
-      </div>
-    );
-  }
-
-export default MainPage
+export default MainPage;

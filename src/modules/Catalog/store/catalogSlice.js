@@ -18,6 +18,10 @@ const catalogSlice = createSlice({
       const { title } = action.payload;
       state.listOpen[title] = !state.listOpen[title];
     },
+    openList: (state, action) => {
+      const { title } = action.payload;
+      state.listOpen[title] = true;
+    },
     clearPdfUrl: (state) => {
       state.pdfUrl = null;
     },
@@ -42,5 +46,5 @@ const catalogSlice = createSlice({
   },
 });
 
-export const { toggleListOpen, clearPdfUrl, setActiveItem } = catalogSlice.actions;
+export const { toggleListOpen, clearPdfUrl, setActiveItem, openList } = catalogSlice.actions;
 export default catalogSlice.reducer;

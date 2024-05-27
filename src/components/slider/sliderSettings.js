@@ -1,5 +1,6 @@
 import SliderArrows from "../../UI/SliderArrows";
 
+
 export const sliderSettings = {
     dots: true,
     infinite: false,

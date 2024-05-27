@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/desktop-2-5.css"/>
+</head>
+<body>
+<div class="desktop_2-1">
+  <p class="header">Конструкция</p>
+  <p class="header-2">Блок радиолокационный</p>
+  <div class="desktop-2-3">
+    
+    <img class="image" id='theImg' src="../assets/construction_num.png">
+    <canvas class="canvas" id='myCanvas' width='700' height='460'></canvas>
+    <div class="table-desktop-2-5" id="tableInfo">
+      <table >  
+      <tbody>
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(12, 195)' onmouseout="Clear()">
+            <td>1</td>    
+            <td><a href="desktop-5-2.html">Антенна</a></td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(187, 197)' onmouseout="Clear()">
+            <td>2</td>
+            <td>Шарнир антенной системы</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(248, 354)' onmouseout="Clear()">
+            <td>3</td>
+            <td>Раздвижная телескопическая штанга с фиксаторами</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(335, 130)' onmouseout="Clear()">
+            <td>4</td>
+            <td><a href="desktop-5-1.html">Пульт управления и индикации</a></td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(313, 440)' onmouseout="Clear()">
+            <td>5</td>
+            <td>Аккумуляторный отсек</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(587, 160)' onmouseout="Clear()">
+            <td>6</td>
+            <td>Разъем головных телефонов  </td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(501, 404)' onmouseout="Clear()">
+            <td>7</td>
+            <td>Кронштейн</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(564, 391)' onmouseout="Clear()">
+            <td>8</td>
+            <td>Фонарь</td>
+          </tr>
+  
+      </tbody>
+      </table>
+    </div>
+    
+   
+  </div>
+  <div class="footer">
+    <button class="button" onclick="nextPage('desktop-2-5.html')">Назад</button>
+    <button class="button" onclick="nextPage('desktop-2.html')">Меню</button> 
+  </div>
+  
+</div>
+<script src="../app/circleDraw.js"></script>
+</body>
+</html>

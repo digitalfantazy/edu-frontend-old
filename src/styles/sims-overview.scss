@@ -29,7 +29,12 @@
     height: auto;
 }
 
+.slider_link {
+    text-decoration: none;
+}
+
 .slider-title {
+    color: black;
 	border-top: 1px solid #d2d2d2;
 	height: 110px;
     font: 500 20px/ 140% var(--font-family);

@@ -12,11 +12,11 @@ export const MENU = [
     link: "sims-page",
   },
   {
-    name: "Преподователям",
-    link: "proffesors",
-  },
-  {
-    name: "Обучающимся",
+    name: "Литература",
     link: "student",
   },
+  // {
+  //   name: "Преподователям",
+  //   link: "proffesors",
+  // },
 ];

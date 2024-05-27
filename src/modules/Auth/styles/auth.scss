@@ -41,6 +41,7 @@
   margin: 15px 0 10px;
 }
 
+
 .auth-container button {
   background-color: #512da8;
   color: #fff;
@@ -212,3 +213,14 @@
 .auth-container.active .toggle-right {
   transform: translateX(200%);
 }
+
+.forgot-password {
+  cursor: pointer;
+  color: #333; /* Добавьте цвет по умолчанию, если нужно */
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: var(--button-color-hover)
+}
+

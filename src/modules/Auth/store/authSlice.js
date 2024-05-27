@@ -14,6 +14,7 @@ const initialState = {
   loginError: null,
   error: null,
   passwordUpdated: false,
+  passwordResetSuccess: false,
 };
 
 const authSlice = createSlice({
@@ -35,7 +36,10 @@ const authSlice = createSlice({
     clearPasswordUpdate: (state) => {
       state.passwordUpdated = false;
     },
-  },
+    clearPasswordReset: (state) => { // Добавьте новый редьюсер для очистки состояния сброса пароля
+      state.passwordResetSuccess = false;
+    },
+      },
   extraReducers: (builder) => {
     builder
 
@@ -149,9 +153,9 @@ const authSlice = createSlice({
         state.error = action.payload;
         state.passwordUpdated = false;
       });
-  },
+    },
 });
 
-export const { resetRegistered, setAuthenticated, clearError, setError, clearPasswordUpdate } =
+export const { resetRegistered, setAuthenticated, clearError, setError, clearPasswordUpdate, clearPasswordReset } =
   authSlice.actions;
 export default authSlice.reducer;

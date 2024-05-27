@@ -6,6 +6,7 @@ import Input from "../../../../components/Input/Input";
 import { clearError, resetRegistered } from "../../store/authSlice";
 import { login } from "../../api/loginFetch";
 import Loading from "../../../../components/loading/Loading";
+import PasswordResetForm from "./PasswordResetForm";
 
 const SignInForm = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,8 @@ const SignInForm = () => {
     username: "",
     password: "",
   });
+
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
 
   useEffect(() => {
     if (registered) dispatch(resetRegistered());
@@ -42,56 +45,57 @@ const SignInForm = () => {
 
   return (
     <div className="form-container sign-in">
-      <form onSubmit={handleSubmit}>
-        {isVerificated ? (
-          <p
-            style={{
-              fontSize: "18px",
-              color: "green",
-              padding: "10px",
-              backgroundColor: "#f4f4f4",
-              border: "1px solid #ccc",
-              borderRadius: "3px",
-              textAlign: "center",
-              margin: "20px 0",
-            }}
-          >
-            Успешно! Теперь вы можете войти в свой аккаунт
-          </p>
-        ) : (
-          ""
-        )}
-        <h1>Вход</h1>
-        <Input
-          name="username"
-          type="text"
-          className={`form-control ${loginError ? "error-input" : ""}`}
-          value={username}
-          onChange={handleChange}
-          placeholder="Логин"
-          required
-          error={loginError}
-        />
-        <Input
-          name="password"
-          type="password"
-          className={`form-control ${loginError ? "error-input" : ""}`}
-          value={password}
-          onChange={handleChange}
-          placeholder="Пароль"
-          required
-          error={loginError}
-        />
-        {/* Нужен компонент */}
-        <div className="social-icons">
-          <span>Вход через </span>
-          <a href="3" className="icon">
-            <i className="fa-brands fa-google" style={{ color: "#B197FC" }}></i>
-          </a>
-        </div>
-        <span>Забыли пароль?</span>
-        {loginError && (
-          <>
+      {isForgotPassword ? (
+        <PasswordResetForm onBack={() => setIsForgotPassword(false)} />
+      ) : (
+        <form onSubmit={handleSubmit}>
+          {isVerificated ? (
+            <p
+              style={{
+                fontSize: "18px",
+                color: "green",
+                padding: "10px",
+                backgroundColor: "#f4f4f4",
+                border: "1px solid #ccc",
+                borderRadius: "3px",
+                textAlign: "center",
+                margin: "20px 0",
+              }}
+            >
+              Успешно! Теперь вы можете войти в свой аккаунт
+            </p>
+          ) : (
+            ""
+          )}
+          <h1>Вход</h1>
+          <Input
+            name="username"
+            type="text"
+            className={`form-control ${loginError ? "error-input" : ""}`}
+            value={username}
+            onChange={handleChange}
+            placeholder="Логин"
+            required
+            error={loginError}
+          />
+          <Input
+            name="password"
+            type="password"
+            className={`form-control ${loginError ? "error-input" : ""}`}
+            value={password}
+            onChange={handleChange}
+            placeholder="Пароль"
+            required
+            error={loginError}
+          />
+          <div className="social-icons">
+            {/* <span>Вход через </span>
+            <a href="3" className="icon">
+              <i className="fa-brands fa-google" style={{ color: "#B197FC" }}></i>
+            </a> */}
+          </div>
+          <span onClick={() => setIsForgotPassword(true)} className="forgot-password">Забыли пароль?</span>
+          {loginError && (
             <div>
               <p className="error-message">
                 {loginError === "No active account found with the given credentials"
@@ -99,10 +103,10 @@ const SignInForm = () => {
                   : loginError}
               </p>
             </div>
-          </>
-        )}
-        {loading ? <Loading /> : <button type="submit">Войти</button>}
-      </form>
+          )}
+          {loading ? <Loading /> : <button type="submit">Войти</button>}
+        </form>
+      )}
     </div>
   );
 };

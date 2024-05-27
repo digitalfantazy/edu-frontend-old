@@ -3,7 +3,6 @@ import React from "react";
 // import { forwardRef } from 'react'
 import BigButton from "../../UI/BigButton";
 
-
 function Intro({ scrollToCatalog }) {
 
 
@@ -12,21 +11,20 @@ function Intro({ scrollToCatalog }) {
     <section className="intro">
 
       <span className="intro__bg-text" aria-hidden="true">
-        Labs
+        Education
       </span>
 
       <div className="container intro__content">
 
         <h1 className="intro__title">
-          Виртуальные и практические лабораторные работы
+          Обучающая платформа с автоматизированными обучающими системами
         </h1>
         
         <p className="intro__descr">
-          Предоставляем возможность выполнить лабораторные работы онлайн
+          Все доступные автоматизированные обучающие системамы в одном месте
         </p>
 
         <BigButton scrollToCatalog={scrollToCatalog} />
-
       </div>
 
     </section>

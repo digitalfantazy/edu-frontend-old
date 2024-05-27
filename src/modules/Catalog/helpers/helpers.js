@@ -135,6 +135,7 @@ export const EXPANDLISTLABS = {
 export const E_Textbooks = [
   {
     id: 1,
+    link: 'NR2000/programa',
     imgURL: NR2000,
     imgAlt: "inmarsat",
     name: "Детектор нелийнейных переходов NR-2000",
@@ -143,6 +144,7 @@ export const E_Textbooks = [
   },
   {
     id: 2,
+    link: 'inmarsat/programa',
     imgURL: INMARSAT,
     imgAlt: "nr2000",
     name: "Судовая земная станция системы INMARSAT-C",
@@ -150,6 +152,7 @@ export const E_Textbooks = [
   },
   {
     id: 3,
+    link: 'prel/programa',
     imgURL: PracticalRadioElectr,
     imgAlt: "PracticalRadioElectr",
     name: "Практическая радиоэлектроника",
@@ -157,6 +160,7 @@ export const E_Textbooks = [
   },
   {
     id: 4,
+    link: 'furunojap/programa',
     imgURL: PVRV_FURUNO_GMSSB,
     imgAlt: "PVRV_FURUNO_GMSSB",
     name: "ПВ/КВ радиоустановка ГМССБ фирмы FURUNO (Япония)",
@@ -165,6 +169,7 @@ export const E_Textbooks = [
   },
   {
     id: 5,
+    link: 'radiosp/programa',
     imgURL: PVKV_RADIO_GMSSB,
     imgAlt: "PVKV_RADIO_GMSSB",
     name: "ПВ/КВ радиустановка ГМССБ фирмы S.P. Radio (Дания) HC-4500 250 W",
@@ -174,16 +179,9 @@ export const E_Textbooks = [
 ];
 
 export const OP = [
-  // {
-  //   id: 1,
-  //   imgURL: kasandra,
-  //   imgAlt: "kasandra",
-  //   name: "Комплекс радиомониторинга и анализа сигналов серии КАССАНДРА",
-  //   descption:
-  //     "Комплекс представляет собой высокотехнологичное устройство для обнаружения, перехвата и анализа радиосигналов.  Комплекс оснащен передовыми функциями для анализа и классификации сигналов, что позволяет оперативно реагировать на угрозы и изменения в радиоэфире.",
-  // },
   {
-    id: 2,
+    id: 1,
+    link: 'NR900EK/programa',
     imgURL: nr900,
     imgAlt: "nr900",
     name: "Средство нелинейно-локационного контроля (на базе NR900 EK Коршун)",
@@ -191,7 +189,8 @@ export const OP = [
       "Устройство для обнаружения скрытой электронной аппаратуры. Устройство эффективно в обнаружении широкого спектра электронных компонентов",
   },
   {
-    id: 3,
+    id: 2,
+    link: 'cpm700/programa',
     imgURL: cpm_700,
     imgAlt: "cpm_700",
     name: "Техническое средство защиты информации CPM-700",
@@ -199,7 +198,8 @@ export const OP = [
       "Устройство для обнаружения скрытых электронных устройств, таких как жучки, скрытые камеры и другие подслушивающие устройства. CPM-700 оснащён различными датчиками и функциями для эффективного сканирования и обнаружения разнообразных типов электронных компонентов.",
   },
   {
-    id: 4,
+    id: 3,
+    link: 'systemrt4822/programa',
     imgURL: system4000GMDSS,
     imgAlt: "system4000GMDSS",
     name: "Имитатор специального многоканального приёмо-передающего устройства SYSTEM 4000 RT 4822",
@@ -207,7 +207,8 @@ export const OP = [
       "SYSTEM 4000 GMDSS RT 4822 VHF DSC — это морское радиоустройство, предназначенное для использования в системе глобальной морской системы связи при бедствиях (GMDSS). Оно обеспечивает связь в диапазоне ОВЧ (очень высокие частоты) и поддерживает цифровую селективную вызывную систему (DSC).",
   },
   {
-    id: 5,
+    id: 4,
+    link: 'sonataav/programa',
     imgURL: sonata_ab,
     imgAlt: "sonata_ab",
     name: "Система виброакустической и акустической защиты СОНАТА-АВ (модель 1м)",
@@ -215,7 +216,8 @@ export const OP = [
       "Устройство предназначено для защиты помещений от утечки информации через виброакустические каналы. Оно используется для создания помех и маскировки звуков.",
   },
   {
-    id: 6,
+    id: 5,
+    link: 'shepot/programa',
     imgURL: shepot,
     imgAlt: "shepot",
     name: "Комплекс для проведения акустических и виброакустических измерений ШЕПОТ",
@@ -223,14 +225,16 @@ export const OP = [
       "Радиоустановка ПВ/КВ ГМССБ HC-4500 250 W от S.P. Radio (Дания) — это долговечное морское оборудование мощностью 250 ватт, предназначенное для надежной связи в экстремальных условиях. Устройство поддерживает глобальные стандарты для чрезвычайной и повседневной связи.",
   },
   {
-    id: 7,
+    id: 6,
+    link: 'netanalyz/programa',
     imgURL: cho_to,
     imgAlt: "cho_to",
     name: "Сетевой анализатор",
     descption: "Сетевой анализатор",
   },
   {
-    id: 8,
+    id: 7,
+    link: 'linpereh/programa',
     imgURL: locator_nel_pereh,
     imgAlt: "locator_nel_pereh",
     name: "Детектор нелинейных переходов",
@@ -238,14 +242,16 @@ export const OP = [
       "Устройство, предназначенное для обнаружения скрытой электроники. Оно работает путем генерации радиочастотного сигнала, который при взаимодействии с полупроводниковыми элементами скрытой аппаратуры вызывает отражение или реэмиссию сигнала.",
   },
   {
-    id: 9,
+    id: 8,
+    link: 'signail20m/programa',
     imgURL: signal_20m,
     imgAlt: "signal_20m",
     name: "Стенд охранно-пожарной сигнализции СИГНАЛ-20М",
     descption: "Стенд охранно-пожарной сигнализции СИГНАЛ-20М",
   },
   {
-    id: 10,
+    id: 9,
+    link: 'lornet/programa',
     imgURL: lornet,
     imgAlt: "lornet",
     name: "Портативный обнаружитель полупроводниковых элементов ЛОРНЕТ",
@@ -257,6 +263,7 @@ export const OP = [
 export const PT = [
     {
     id: 1,
+    link: 'kassandra/programa',
     imgURL: kasandra,
     imgAlt: "kasandra",
     name: "Комплекс радиомониторинга и анализа сигналов серии КАССАНДРА",
@@ -265,6 +272,7 @@ export const PT = [
   },
   {
     id: 2,
+    link: 'sinerget/programa',
     imgURL: sinerget,
     imgAlt: "sinerget",
     name: "Программно-аппаратный комплекс 'Синергет'",
@@ -273,6 +281,7 @@ export const PT = [
   },
   {
     id: 3,
+    link: 'furunom1632/programa',
     imgURL: FURUNO,
     imgAlt: "FURUNO",
     name: "Furuno M-1623 — радиолокационная станция",
@@ -281,6 +290,7 @@ export const PT = [
   },
   {
     id: 4,
+    link: 'aist/programa',
     imgURL: AIST,
     imgAlt: "AIST",
     name: "Комплексы АИСТ для оценки акустоэлектрической защищенности систем",
@@ -289,6 +299,7 @@ export const PT = [
   },
   {
     id: 5,
+    link: 'navph/programa',
     imgURL: navigator_PH,
     imgAlt: "navigator_PH",
     name: "Программнно-аппартный комплекс поиска и измерения ПЭМИН 'Навигатор-Пх'",
@@ -297,6 +308,7 @@ export const PT = [
   },
   {
     id: 6,
+    link: 'videolocator/programa',
     imgURL: videoLocator,
     imgAlt: "videoLocator",
     name: "Цифровая система видеонаблюдения и аудиорегистрации 'Видеолокатор'",
@@ -305,6 +317,7 @@ export const PT = [
   },
   {
     id: 7,
+    link: 'dscpc1565/programa',
     imgURL: DSC_PC_1565,
     imgAlt: "DSC_PC_1565",
     name: "Стенд-тренажер охранной сигнализации на базе прибора 'DSC PC - 1565'",
@@ -313,6 +326,7 @@ export const PT = [
   },
   {
     id: 8,
+    link: 'otclick/programa',
     imgURL: Otclick,
     imgAlt: "Otclick",
     name: "Программный комплекс по изучению анализатора проводных линий Отклик - 2",
@@ -330,8 +344,16 @@ export const TABLINKS = [
     name: "Методическое обеспечение",
     link: "about",
   },
-  {
-    name: "Справка",
-    link: "info",
-  },
 ];
+
+
+export const ALLOWED_LINKS = [
+  { labId: "NR2000", param: "about" },
+  { labId: "kassandra", param: "kassandra_k6" },
+  { labId: "NR900EK", param: "NR900EK_ruk" },
+  { labId: "prel", param: "electronica_schematechnica" },
+  // { labId: "NR900EK", param: "about" },
+
+
+];
+

@@ -1,13 +1,19 @@
 import React from "react";
 
-const PDF = ({ src, width, height, type }) => {
-
-    // console.log({ key, src, width, height, type })
+const GetPDFurl = ({ src, width, height, type }) => {
   return (
     <div className="catalog-labs">
-      <embed src={src} width={width} height={height} type={type} />
+      <object
+        data={`${src}#toolbar=0&navpanes=0&scrollbar=0`}
+        type={type}
+        width={width}
+        height={height}
+        aria-label="PDF Document"
+      >
+        <p>Ваш браузер не поддерживает встраивание PDF. Вы можете скачать документ <a href={src}>здесь</a>.</p>
+      </object>
     </div>
   );
 };
 
-export default PDF;
+export default GetPDFurl;

@@ -55,7 +55,7 @@ const SignUpForm = () => {
           className={`form-control`}
           value={name}
           onChange={handleChange}
-          placeholder="Имя"
+          placeholder="ФИО (с большой буквы)"
           required
           // error={registrationError && registrationError.username}
         />

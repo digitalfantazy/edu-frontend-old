@@ -82,7 +82,6 @@ const Labs = () => {
         }
       }
     }
-
     console.log(pdfUrl)
 
     if (labId) {

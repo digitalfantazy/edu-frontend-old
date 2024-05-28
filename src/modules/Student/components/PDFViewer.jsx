@@ -22,9 +22,8 @@ const PDFViewer = () => {
     }
     dispatch(getPDFDocument({ filename }));
   }, [dispatch, filename]);
-
   console.log(pdfFile)
-
+  
 if (error) {
     <p>Произошла ошибка. Попробуйте обновить страницу</p>
 }

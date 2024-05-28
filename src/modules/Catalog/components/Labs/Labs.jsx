@@ -83,6 +83,8 @@ const Labs = () => {
       }
     }
 
+    console.log(pdfUrl)
+
     if (labId) {
       const titles = {
         NR2000: "Электронные учебные пособия",

@@ -4,8 +4,8 @@ const GetPDFurl = ({ src, width, height, type }) => {
   return (
     <div className="catalog-labs">
       <object
-        data={`${src}#toolbar=0&navpanes=0&scrollbar=0`}
-        type={type}
+        data={`${src}`}
+        type="application/pdf"
         width={width}
         height={height}
         aria-label="PDF Document"

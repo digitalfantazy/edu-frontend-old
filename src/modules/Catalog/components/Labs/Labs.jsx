@@ -10,6 +10,7 @@ import Loading from "../../../../components/loading/Loading";
 
 import img from "../../../../img/ElectronicTextbooks/INMARSAT.png";
 
+
 import "../../styles/labs.scss";
 
 const ALLOWED_LINKS = [
@@ -20,15 +21,14 @@ const ALLOWED_LINKS = [
   // Добавьте другие разрешенные комбинации параметров здесь
 ];
 
-const isAllowedLink = (labId, param) => ALLOWED_LINKS.some((link) => link.labId === labId && link.param === param);
+const isAllowedLink = (labId, param) =>
+  ALLOWED_LINKS.some((link) => link.labId === labId && link.param === param);
 
 const renderContent = (labId, param, pdfUrl, loading) => {
-  const link = ALLOWED_LINKS.find(link => link.labId === labId && link.param === param);
+  const link = ALLOWED_LINKS.find((link) => link.labId === labId && link.param === param);
   if (link) {
     const { pdf } = link;
-    return (
-      <PDFContent pdfUrl={pdfUrl} loading={loading} />
-    );
+    return <PDFContent pdfUrl={pdfUrl} loading={loading} />;
   }
 
   switch (labId) {
@@ -45,7 +45,15 @@ const renderContent = (labId, param, pdfUrl, loading) => {
     case "inmarsat":
       return param === "programa" ? <img src={img} alt="Inmarsat" /> : null;
     case "kassandra":
-      return param === "programa" ? <p>Текст</p> : null;
+      return param === "programa" ? (
+        <FrameContent
+          className="catalog-frame"
+          title="App"
+          src="/kasandra/копия_HTML5 Canvas.html"
+          width="1000"
+          height="900"
+        />
+      ) : null;
     case "NR900EK":
       return param === "programa" ? <p>В разработке</p> : null;
     default:
@@ -76,7 +84,7 @@ const Labs = () => {
         dispatch(clearPdfUrl());
       }
       if (!pdfUrl) {
-        const link = ALLOWED_LINKS.find(link => link.labId === labId && link.param === param);
+        const link = ALLOWED_LINKS.find((link) => link.labId === labId && link.param === param);
         if (link) {
           dispatch(getPDF({ param: link.pdf }));
         }

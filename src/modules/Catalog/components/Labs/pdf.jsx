@@ -9,6 +9,7 @@ const GetPDFurl = ({ src, width, height, type }) => {
         width={width}
         height={height}
         aria-label="PDF Document"
+        title="pdf"
       >
         <p>Ваш браузер не поддерживает встраивание PDF. Вы можете скачать документ <a href={src}>здесь</a>.</p>
       </object>

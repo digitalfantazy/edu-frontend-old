@@ -3,7 +3,7 @@ import { API_URL } from "../../../utils/constants";
 
 export const getPDFDocument = createAsyncThunk("literature/getPDFDocument", async ({ filename }, thunkAPI) => {
   try {
-    const res = await fetch(`${API_URL}/api/get-pdf/${filename}`, {
+    const res = await fetch(`${API_URL}/api/pdf/${filename}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("access")}`,

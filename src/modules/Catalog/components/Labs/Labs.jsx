@@ -49,7 +49,7 @@ const renderContent = (labId, param, pdfUrl, loading) => {
         <FrameContent
           className="catalog-frame"
           title="App"
-          src="/kasandra/копия_HTML5 Canvas.html"
+          src="/kasandra/kassandra.html"
           width="1000"
           height="900"
         />

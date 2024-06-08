@@ -1,0 +1,63 @@
+.intro__bg-text {
+	user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    margin-top: 50px;
+    font-family: "Intro", sans-serif;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 200px;
+    color: rgba(255, 255, 255, 0.12);
+    transform: translate(-50%, -50%);
+}
+
+.intro {
+    position: relative;
+    padding: 130px 0;
+	background: var(--background--color)
+}
+
+.intro__content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	height: 100%;
+}
+
+.intro__title {
+	margin: 0;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	max-width: 50%;
+	font: 700 36px/140% "Intro", sans-serif;
+	font-size: 48px;
+	color: var(--color-white)
+}
+
+.intro__descr {
+	margin: 0;
+	margin-bottom: 40px;
+	max-width: calc(50% - 100px);
+	font: 400 16px/ 140% var(--font-family);
+	color: var(--color-white)
+}
+
+.btn {
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	padding: 22px 47px;
+	font: 600 16px/ 140% var(--font-family);
+	transition: all 0.5s;
+    color: var(--color-white);
+	background-color: var(--button-color)
+}
+
+.btn:hover {
+	background-color: var(--button-color-hover);
+	color: var(--color-white)
+}

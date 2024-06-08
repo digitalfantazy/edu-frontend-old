@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles/desktop-2-5.css"/>
+</head>
+<body>
+<div class="desktop_2-1">
+  <p class="header">Конструкция</p>
+  <p class="header-2">Пульт управления и индикации</p>
+  <div class="desktop-2-3">
+    
+    <img class="image-1" id='theImg' src="../assets/pult_num.png" width="371" height="700">
+    <canvas class="canvas" id='myCanvas' width="371" height="700"></canvas>
+    <div  id="tableInfo">
+      <table class="table-desktop-5-1" >  
+      <tbody>
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 71)' onmouseout="Clear()">
+            <td>1</td>    
+            <td>Кнопка включения питания изделия</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 203)' onmouseout="Clear()">
+            <td>2</td>
+            <td>Кнопка с индикатором включения зондирующего сигнала</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 259)' onmouseout="Clear()">
+            <td>3</td>
+            <td>Кнопка с индикатором включения режима 20К</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 320)' onmouseout="Clear()">
+            <td>4</td>
+            <td>Кнопка с индикатором выбора приемника (второй или третьей гармоники)</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 450)' onmouseout="Clear()">
+            <td>5</td>
+            <td>Кнопки регулировки громкости сигнала в головных телефонах</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 562)' onmouseout="Clear()">
+            <td>6</td>
+            <td>Шкала уровня мощности излучения  </td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(24, 613)' onmouseout="Clear()">
+            <td>7</td>
+            <td>Кнопки регулировки мощности излучения</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(339, 612)' onmouseout="Clear()">
+            <td>8</td>
+            <td>Кнопки регулировки уровней принимаемых сигналов</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(339, 468)' onmouseout="Clear()">
+            <td>9</td>
+            <td>Шкала ослабления уровней принимаемых сигналов</td>
+          </tr>
+
+          <tr id='draw-btn' type='button' value='Draw' onmouseover='Draw(350, 220)' onmouseout="Clear()">
+            <td>10</td>
+            <td>Светодиодные шкалы уровня принимаемого сигнала</td>
+          </tr>
+  
+      </tbody>
+      </table>
+    </div>
+    
+   
+  </div>
+  <div class="footer">
+    <button class="button" onclick="nextPage('desktop-5.html')">Назад</button>
+    <button class="button" onclick="nextPage('desktop-2.html')">Меню</button> 
+  </div>
+  
+</div>
+<script src="../app/circleDraw.js"></script>
+</body>
+</html>

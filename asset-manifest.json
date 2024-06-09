@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55c1dc3c.css",
-    "main.js": "/static/js/main.d83a700b.js",
+    "main.js": "/static/js/main.91821d63.js",
     "static/media/met_koncept_zashiti.png": "/static/media/met_koncept_zashiti.f7aad3b0c91bc490f895.png",
     "static/media/osnovi_zashiti_inf.png": "/static/media/osnovi_zashiti_inf.6618c1bd17f906fa76d1.png",
     "static/media/navigator-PH.png": "/static/media/navigator-PH.94694982c95b1121c6f0.png",
@@ -51,10 +51,10 @@
     "index.html": "/index.html",
     "static/media/arrow-down.svg": "/static/media/arrow-down.d7c25147326015b5450018f50e276eb1.svg",
     "main.55c1dc3c.css.map": "/static/css/main.55c1dc3c.css.map",
-    "main.d83a700b.js.map": "/static/js/main.d83a700b.js.map"
+    "main.91821d63.js.map": "/static/js/main.91821d63.js.map"
   },
   "entrypoints": [
     "static/css/main.55c1dc3c.css",
-    "static/js/main.d83a700b.js"
+    "static/js/main.91821d63.js"
   ]
 }

@@ -24,7 +24,7 @@ export const useCombinedCards = () => {
       id: 1,
       category: "manual",
       preview: poiskovi_probori,
-      link: "poiskovi_probori",
+      link: "poiskovi_pribori",
     },
     {
       id: 2,
